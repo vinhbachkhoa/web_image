@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 /* --- */
+import { CKEditorModule } from 'ng2-ckeditor';
 
 
 import { AppComponent } from './app.component';
@@ -25,6 +26,8 @@ import { routerApp } from './router/router-app';
   imports: [
     BrowserModule,
     routerApp,
+    FormsModule,
+    CKEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
