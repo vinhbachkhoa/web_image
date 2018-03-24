@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ContentService } from '../content/content.service';
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
@@ -7,12 +6,10 @@ import { ContentService } from '../content/content.service';
 })
 export class ContentComponent implements OnInit {
 
-  constructor(private contentService: ContentService) { }
+  constructor() { }
 
   content: any;
   ngOnInit() {
-    // this.contentService.getData().subscribe((res) => {
-    //   this.content = res;
-    // });
+    
   }
 }
