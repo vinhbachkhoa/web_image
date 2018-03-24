@@ -14,12 +14,12 @@ var corsOptions = {
 
 app.use(cors(corsOptions)); */
 
-app.use((request, response, next) => {
-    response.setHeader('Content-Type', 'application/json');
-    response.header("Access-Control-Allow-Origin", "*");
-    response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-})
+// app.use((request, response, next) => {
+//     response.setHeader('Content-Type', 'application/json');
+//     response.header("Access-Control-Allow-Origin", "*");
+//     response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//     next();
+// })
 
 /* end */
 
@@ -34,21 +34,21 @@ const initOptions = {
 const pgp = require('pg-promise')(initOptions);
 
 //Database connection details internet;
-// const cn = {
-//     host: 'ec2-54-235-146-51.compute-1.amazonaws.com', // 'localhost' is the default;
-//     port: 5432, // 5432 is the default;
-//     database: 'd165i60tp5ph6b',
-//     user: 'fprwlcclapsznc',
-//     password: 'aeb59ea51821f4f1fa8b3ddcdb00e88430c2ef131b789c625cd3d5b5e65de300'
-// };
-
 const cn = {
-    host: 'localhost', // 'localhost' is the default;
+    host: 'ec2-54-235-146-51.compute-1.amazonaws.com', // 'localhost' is the default;
     port: 5432, // 5432 is the default;
-    database: 'restore',
-    user: 'postgres',
-    password: '123'
+    database: 'd165i60tp5ph6b',
+    user: 'fprwlcclapsznc',
+    password: 'aeb59ea51821f4f1fa8b3ddcdb00e88430c2ef131b789c625cd3d5b5e65de300'
 };
+
+// const cn = {
+//     host: 'localhost', // 'localhost' is the default;
+//     port: 5432, // 5432 is the default;
+//     database: 'restore',
+//     user: 'postgres',
+//     password: '123'
+// };
 
 var db = pgp(cn)
 
