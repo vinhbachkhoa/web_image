@@ -76,7 +76,7 @@ app.get('/', (req, res) => {
 })
 app.get('/title', async (req, res) => {
     let data = await select();
-    res.send(data.title);
+    res.send(data);
 });
 
 app.listen(process.env.PORT || 8080);
