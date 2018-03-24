@@ -6,9 +6,9 @@ import 'rxjs/add/operator/map';
 export class ContentService {
 
     constructor(private http: Http) { }
-    url = 'https://quangvinh.herokuapp.com/';
-    getData(): Observable<any[]> {
+    url = 'https://quangvinh.herokuapp.com/'; // chu y la phai co http://
+    getData(): Observable<any> {
         debugger;
-        return this.http.get(this.url).map((res: Response) => res.json());
+        return this.http.get(this.url).map((res: Response) => res.text());
     }
 }
