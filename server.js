@@ -14,12 +14,12 @@ var corsOptions = {
 
 app.use(cors(corsOptions)); */
 
-app.use((request, response, next) => {
-    response.setHeader('Content-Type', 'application/json');
-    response.header("Access-Control-Allow-Origin", "*");
-    response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-})
+// app.use((request, response, next) => {
+//     response.setHeader('Content-Type', 'application/json');
+//     response.header("Access-Control-Allow-Origin", "*");
+//     response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//     next();
+// })
 
 /* end */
 
