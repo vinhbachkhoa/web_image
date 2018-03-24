@@ -11,9 +11,9 @@ export class ContentComponent implements OnInit {
 
   content: any;
   ngOnInit() {
-    // this.contentSerivce.getData().subscribe((res) => {
-    //   this.content = res;
-    //   console.log(this.content);
-    // })
+    this.contentSerivce.getData().subscribe((res) => {
+      this.content = res;
+      console.log(this.content);
+    })
   }
 }
