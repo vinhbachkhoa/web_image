@@ -14,12 +14,12 @@ const app = express();
 
 // app.use(cors(corsOptions));
 
-app.use((request, response, next) => {
-    response.setHeader('Content-Type', 'application/json');
-    response.header("Access-Control-Allow-Origin", "*");
-    response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-})
+// app.use((request, response, next) => {
+//     response.setHeader('Content-Type', 'application/json');
+//     response.header("Access-Control-Allow-Origin", "*");
+//     response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//     next();
+// })
 
 /* end */
 
@@ -74,10 +74,10 @@ app.use(express.static(__dirname + '/dist'));
 app.get('/', (req, res) => {
     res.send();
 })
-app.get('/title', async (req, res) => {
-    let data = await select();
-    res.send(data.title);
-});
+// app.get('/title', async (req, res) => {
+//     let data = await select();
+//     res.send(data.title);
+// });
 
 app.listen(process.env.PORT || 8080);
 console.log("Listen 8080");
