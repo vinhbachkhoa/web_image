@@ -72,7 +72,7 @@ app.use(express.static(__dirname + '/dist'));
 
 /* -- cau hinh router */
 app.get('/', (req, res) => {
-    res.send("hello");
+    res.send();
 })
 app.get('/title', async (req, res) => {
     let data = await select();
