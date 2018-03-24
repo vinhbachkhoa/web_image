@@ -9,7 +9,7 @@ export class ContentComponent implements OnInit {
 
   constructor(private contentSerivce: ContentService) { }
 
-  contents: any[] = [];
+  contents: any[] = [{title:""}];
   content: string="quang vinh";
   ngOnInit() {
     this.contentSerivce.getData().subscribe((res) => {
