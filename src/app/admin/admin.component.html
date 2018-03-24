@@ -39,9 +39,7 @@
                 <div class="input-group-prepend col-3">
                   <span class="input-group-text " id="inputGroup-sizing-default">Noi dung: </span>
                 </div>
-                <ckeditor [(ngModel)]="ckeditorContent" name="content" [config]="{uiColor: '#66AB16'}" [readonly]="false" (change)="onChange($event)"
-                  (editorChange)="onEditorChange($event)" (ready)="onReady($event)" (focus)="onFocus($event)" (blur)="onBlur($event)"
-                  (contentDom)="onContentDom($event)" (fileUploadRequest)="onFileUploadRequest($event)" debounce="500">
+                <ckeditor [(ngModel)]="ckeditorContent" name="content" [config]="{uiColor: '#66AB16'}">
                 </ckeditor>
 
               </div>

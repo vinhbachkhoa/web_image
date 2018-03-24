@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 /* --- */
 import { CKEditorModule } from 'ng2-ckeditor';
 
@@ -12,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
 import { ErrorComponent } from './error/error.component';
 import { routerApp } from './router/router-app';
+import { ContentService } from './content/content.service';
 
 
 @NgModule({
@@ -27,9 +29,10 @@ import { routerApp } from './router/router-app';
     BrowserModule,
     routerApp,
     FormsModule,
-    CKEditorModule
+    CKEditorModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [ContentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

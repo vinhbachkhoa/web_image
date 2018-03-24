@@ -8,6 +8,7 @@ import { } from '../../assets/ckeditor/ckeditor.js';
 })
 export class AdminComponent implements OnInit {
 
+  ckeditorContent: string;
   constructor() { }
 
   ngOnInit() {
