@@ -10,11 +10,11 @@ export class ContentComponent implements OnInit {
   constructor(private contentSerivce: ContentService) { }
 
   contents: any[] = [];
-  content: string;
+  content: string="quang vinh";
   ngOnInit() {
     this.contentSerivce.getData().subscribe((res) => {
-      this.content = res;
-      this.contents.push(res);
+      // this.content = res;
+      this.contents=res;
       console.log(this.contents);
     })
   }

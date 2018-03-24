@@ -61,7 +61,7 @@ db.any('SELECT * from blog')
     })
 
 function select() {
-    return db.one('select title from blog where id =1');
+    return db.one('select title from blog');
 }
 
 /* -- end -- */
