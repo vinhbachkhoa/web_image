@@ -76,6 +76,7 @@ app.get('/', (req, res) => {
 })
 app.get('/title', async (req, res) => {
     let data = await select();
+    console.log(data);
     res.send(data);
 });
 
