@@ -8,8 +8,8 @@ export class ContentService {
     constructor(private http: Http) { }
     url = 'https://quangvinh.herokuapp.com/title'; // chu y la phai co http://
     // url = 'http://localhost:8080/title';
-    getData(): Observable<any[]> {
+    getData(): Observable<any> {
         debugger;
-        return this.http.get(this.url).map((res: Response) => res.json());
+        return this.http.get(this.url).map((res: Response) => res.text());
     }
 }
