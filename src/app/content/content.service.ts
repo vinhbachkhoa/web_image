@@ -6,7 +6,7 @@ import { Observable } from 'rxjs/Observable';
 export class ContentService {
     // tslint:disable-next-line:whitespace
     constructor(private http: Http) { }
-    url = 'https://quangvinh.herokuapp.com/';
+    url = 'demo';
     getData(): Observable<any[]> {
         return this.http.get(this.url).map((res: Response) => res.json());
     }
