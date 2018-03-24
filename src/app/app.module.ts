@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
 import { ErrorComponent } from './error/error.component';
 import { routerApp } from './router/router-app';
+import { ContentService } from './content/content.service';
 
 
 @NgModule({
@@ -31,7 +32,9 @@ import { routerApp } from './router/router-app';
     CKEditorModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    ContentService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
