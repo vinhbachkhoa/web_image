@@ -13,6 +13,7 @@ export class ContentComponent implements OnInit {
   ngOnInit() {
     this.contentSerivce.getData().subscribe((res) => {
       this.content = res;
+      console.log(this.content);
     })
   }
 }
