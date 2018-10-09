@@ -1,33 +1,42 @@
 <div class="container">
-  <div class="row">
-    <div class="col-md-12" id="header-content">
-      <h5>Cac bai viet moi</h5>
-      <p style="font-size: 14px">Tong so ket qua tra ve la 100</p>
-    </div>
-  </div>
-  <div class="row">
+  <!-- body -->
+  <div class="row pr-3 pl-3">
     <div class="col-md-12">
-      <div class="row" style="margin-bottom: 1em;" *ngFor="let content of contents">
-        <!-- image -->
-        <div class="col-md-3 border border-secondary rounded card" id="img-content">
-          <img src="../../assets/y-nghia-hoa-sen.jpg" class="img-fluid" alt="Responsive image">
-        </div>
-        <!-- content -->
-        <div class="col-md-9">
-          <h5 class="text-primary">{{content.title}}</h5>
-          <div>
-            <span style="font-size: 14px">
-              <i></i>Nguoi dang: Le quang vinh</span>
-            <span>|</span>
-            <span style="font-size: 14px">Ngay dang:
-              <i></i>
-            </span>
+      <div class="col-md-6 float-left">
+        <!-- upload file -->
+        <div class="row">
+          <div class="col-md-12">
+            <form (submit)="upLoadFile()">
+              <h5 class="">Upload image</h5>
+              <div class="input-group">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="file" (change)="handleChange($event.target.files)">
+                  <label class="custom-file-label" for="file">Choose file</label>
+                </div>
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="submit">Submit</button>
+                </div>
+              </div>
+            </form>
           </div>
-          <div>
-            <p>Thong tin ve bitcoin dang tro len rat hot trong nhung ngay qua</p>
+        </div>
+        <!-- display text -->
+        <div class="row">
+          <div class="col-md-12">
+            <h5>Text for image:</h5>
           </div>
         </div>
       </div>
+
+
+      <!-- display video -->
+      <div class="col-md-6 float-right">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+        </div>
+      </div>
+
     </div>
   </div>
+  <!-- end body -->
 </div>

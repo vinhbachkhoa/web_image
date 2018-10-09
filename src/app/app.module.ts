@@ -11,7 +11,8 @@ import { ContentComponent } from './content/content.component';
 import { HomeComponent } from './home/home.component';
 import { ErrorComponent } from './error/error.component';
 import { routerApp } from './router/router-app';
-import { ContentService } from './content/content.service';
+import { ContentService } from './content/contents.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import { ContentService } from './content/content.service';
     routerApp,
     FormsModule,
     CKEditorModule,
-    HttpModule
+    HttpClientModule
   ],
   providers: [
     ContentService

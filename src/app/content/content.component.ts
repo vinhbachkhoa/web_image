@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ContentService } from './content.service';
+import { ContentService } from './contents.service';
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
@@ -7,15 +7,26 @@ import { ContentService } from './content.service';
 })
 export class ContentComponent implements OnInit {
 
-  constructor(private contentSerivce: ContentService) { }
+  fileToUpload: File = null;
 
-  contents: any[] = [];
-  content: string="quang vinh";
+  constructor(private homeService: ContentService) { }
+
   ngOnInit() {
-    // this.contentSerivce.getData().subscribe((res) => {
-    //   console.log(res);
-    //   this.contents=res;
-    //   console.log(this.contents);
-    // })
+  }
+
+  handleChange(file: FileList) {
+    debugger;
+    this.fileToUpload = file.item(0);
+    console.log(this.fileToUpload);
+  }
+
+  upLoadFile() {
+    this.homeService.uploadFile(this.fileToUpload)
+      .then(res => {
+        console.log("upload success");
+      })
+      .catch(error => {
+        console.log("Upload fail");
+      })
   }
 }
