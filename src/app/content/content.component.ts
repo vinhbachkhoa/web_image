@@ -12,10 +12,10 @@ export class ContentComponent implements OnInit {
   contents: any[] = [];
   content: string="quang vinh";
   ngOnInit() {
-    this.contentSerivce.getData().subscribe((res) => {
-      console.log(res);
-      this.contents=res;
-      console.log(this.contents);
-    })
+    // this.contentSerivce.getData().subscribe((res) => {
+    //   console.log(res);
+    //   this.contents=res;
+    //   console.log(this.contents);
+    // })
   }
 }
