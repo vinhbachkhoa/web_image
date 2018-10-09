@@ -9,12 +9,9 @@
             <form (submit)="upLoadFile()">
               <h5 class="">Upload image</h5>
               <div class="input-group">
-                <div class="custom-file border">
-                  <input type="file" class="custom-file-input border" id="file" (change)="handleChange($event.target.files)">
-                  <label class="custom-file-label" for="file">Choose file</label>
-                </div>
-                <div class="input-group-append">
-                  <button class="btn btn-outline-secondary" type="submit">Submit</button>
+                <div>
+                  <input type="file" id="file" (change)="handleChange($event.target.files)">
+                  <button class="btn btn-outline-primary" type="submit">Submit</button>
                 </div>
               </div>
             </form>
